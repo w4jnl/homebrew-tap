@@ -8,3 +8,6 @@ brew install flok        # herdr-like agent sidebar for tmux — https://github.
 ```
 
 Formulae are bumped by `scripts/release.sh` in each project's repository.
+
+Every push touching `Formula/` is installed from source, tested and audited on macOS and Linux
+by the `formula` workflow.
