@@ -18,9 +18,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # setup-homebrew taps this repository itself (at the pushed commit) when it runs inside a
+      # homebrew-* repo; tapping again from a path fails with "remote mismatch".
       - uses: Homebrew/actions/setup-homebrew@49d03f1bf5d455a413dfbdf99e6718054a4cd975 # master
-      - name: tap this checkout
-        run: brew tap w4jnl/tap "$PWD"
+      - run: brew tap-info w4jnl/tap
       - run: brew install --build-from-source w4jnl/tap/flok
       - run: brew test flok
       - run: brew audit --strict --online w4jnl/tap/flok
