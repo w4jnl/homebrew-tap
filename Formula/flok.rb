@@ -1,8 +1,8 @@
 class Flok < Formula
   desc "Herdr-like agent sidebar for tmux"
   homepage "https://github.com/w4jnl/flok"
-  url "https://github.com/w4jnl/flok/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "5753a7a8858f21b6054a991409e4f0ed057e4565e189fe104bc30d7a0ed88a45"
+  url "https://github.com/w4jnl/flok/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "64aab56e8c791dbb4e67096fdd2a0a38f5db4587e211ffec7340bebd382a4223"
   license "MIT"
   head "https://github.com/w4jnl/flok.git", branch: "main"
 
