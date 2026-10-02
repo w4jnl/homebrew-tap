@@ -5,7 +5,7 @@ class Vink < Formula
   desc "Self-hosted heartbeat and uptime monitor"
   homepage "https://github.com/w4jnl/vink"
   url "https://github.com/w4jnl/vink/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "4fb411ee86cfeb7e898d87629f618a81b5bb26a9a126570a156477a6319e229f"
   license "MIT"
   head "https://github.com/w4jnl/vink.git", branch: "main"
 
