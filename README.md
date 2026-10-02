@@ -6,10 +6,12 @@ Homebrew tap for tools from [w4jnl](https://github.com/w4jnl).
 brew tap w4jnl/tap
 brew install flok        # herdr-like agent sidebar for tmux — https://github.com/w4jnl/flok
 brew install mwrelay     # SMTP relay for MotiveWave fills — private repo: needs an SSH key with access
+brew install vink        # self-hosted heartbeat and uptime monitor — https://github.com/w4jnl/vink (from its first release)
 ```
 
 Formulae are bumped by `scripts/release.sh` in each project's repository.
 
 Every push touching `Formula/` is installed from source, tested and audited on macOS and Linux
-by the `formula` workflow — except mwrelay, whose private repo the runners cannot clone; it only
-gets `brew style` here and is installed/tested on the dev machine before each bump.
+by the `formula` workflow — except mwrelay, whose private repo the runners cannot clone, and vink
+until its first public release; those only get `brew style` here and are installed/tested on the
+dev machine before each bump.

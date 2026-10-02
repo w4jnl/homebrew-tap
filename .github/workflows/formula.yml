@@ -29,3 +29,6 @@ jobs:
       # mwrelay's repo is private — runners can't clone it, so no install/
       # test/audit here; style is pure RuboCop and needs no fetch.
       - run: brew style w4jnl/tap/mwrelay
+      # vink's repo is private until its first public release, so its tarball cannot be
+      # fetched yet; style only. Once v0.1.0 is out, add install, test and audit like flok's.
+      - run: brew style w4jnl/tap/vink
