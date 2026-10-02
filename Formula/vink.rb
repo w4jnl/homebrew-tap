@@ -1,6 +1,5 @@
 # vink builds from the release tarball; scripts/release.sh in w4jnl/vink keeps the url and
-# sha256 current at every tag. Until the first public release the url does not resolve, so the
-# tap workflow only runs `brew style` on this formula; switch install/test/audit on afterwards.
+# sha256 current at every tag.
 class Vink < Formula
   desc "Self-hosted heartbeat and uptime monitor"
   homepage "https://github.com/w4jnl/vink"
