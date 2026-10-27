@@ -33,3 +33,7 @@ jobs:
       - run: brew test vink
       - run: brew audit --strict --online w4jnl/tap/vink
       - run: brew style w4jnl/tap/vink
+      - run: brew install --build-from-source w4jnl/tap/nt
+      - run: brew test nt
+      - run: brew audit --strict --online w4jnl/tap/nt
+      - run: brew style w4jnl/tap/nt

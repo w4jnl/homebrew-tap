@@ -5,6 +5,7 @@ Homebrew tap for tools from [w4jnl](https://github.com/w4jnl).
 ```sh
 brew tap w4jnl/tap
 brew install flok        # herdr-like agent sidebar for tmux — https://github.com/w4jnl/flok
+brew install nt          # plain markdown notes, synced by git — https://github.com/w4jnl/nt
 brew install mwrelay     # SMTP relay for MotiveWave fills — private repo: needs an SSH key with access
 brew install vink        # self-hosted heartbeat and uptime monitor — https://github.com/w4jnl/vink
 ```
