@@ -2,13 +2,32 @@ name: formula
 
 on:
   push:
-    paths: ['Formula/**', '.github/workflows/formula.yml']
+    paths: ['Formula/**', 'Casks/**', '.github/workflows/formula.yml']
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
+  # nt for Mac: a notarized DMG on nt's GitHub release, macOS 26 or later. Style and the audit,
+  # which downloads it and checks its checksum, run anywhere; the install only where it can.
+  cask:
+    name: cask (nt-app)
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@49d03f1bf5d455a413dfbdf99e6718054a4cd975 # master
+      - run: brew style --cask w4jnl/tap/nt-app
+      - run: brew audit --cask --strict --online w4jnl/tap/nt-app
+      - name: install, where macOS is 26 or later
+        run: |
+          if [ "$(sw_vers -productVersion | cut -d. -f1)" -ge 26 ]; then
+            brew install --cask w4jnl/tap/nt-app
+            out=$(spctl --assess -vv /Applications/nt.app 2>&1) || true
+            echo "$out"
+            grep -q "source=Notarized Developer ID" <<<"$out"
+          else
+            echo "macOS $(sw_vers -productVersion): nt for Mac needs 26, so no install here"
+          fi
   install:
     name: install (${{ matrix.os }})
     strategy:

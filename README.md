@@ -8,9 +8,10 @@ brew install flok        # herdr-like agent sidebar for tmux — https://github.
 brew install nt          # plain markdown notes, synced by git — https://github.com/w4jnl/nt
 brew install mwrelay     # SMTP relay for MotiveWave fills — private repo: needs an SSH key with access
 brew install vink        # self-hosted heartbeat and uptime monitor — https://github.com/w4jnl/vink
+brew install --cask nt-app   # nt for Mac, notarized; macOS 26 or later — https://github.com/w4jnl/nt
 ```
 
-Formulae are bumped by `scripts/release.sh` in each project's repository.
+Formulae and the cask are bumped by `scripts/release.sh` in each project's repository.
 
 Every push touching `Formula/` is installed from source, tested and audited on macOS and Linux
 by the `formula` workflow — except mwrelay, whose private repo the runners cannot clone; it only
