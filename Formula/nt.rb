@@ -3,8 +3,8 @@
 class Nt < Formula
   desc "Plain markdown notes, synced by git"
   homepage "https://github.com/w4jnl/nt"
-  url "https://github.com/w4jnl/nt/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "26dea0554fffc3678886c8b216b9af94af2380f58d192add641bd20a3bd152c0"
+  url "https://github.com/w4jnl/nt/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "a35f8ba2d583706a277c713e32c49dbe7aab622eec0ad4ad9032be6c14c1396c"
   license "MIT"
   head "https://github.com/w4jnl/nt.git", branch: "main"
 
