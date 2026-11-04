@@ -28,6 +28,24 @@ jobs:
           else
             echo "macOS $(sw_vers -productVersion): nt for Mac needs 26, so no install here"
           fi
+  # doma for Mac: the same shape, a notarized DMG on doma's GitHub release, macOS 26 or later.
+  cask-doma:
+    name: cask (doma)
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@49d03f1bf5d455a413dfbdf99e6718054a4cd975 # master
+      - run: brew style --cask w4jnl/tap/doma
+      - run: brew audit --cask --strict --online w4jnl/tap/doma
+      - name: install, where macOS is 26 or later
+        run: |
+          if [ "$(sw_vers -productVersion | cut -d. -f1)" -ge 26 ]; then
+            brew install --cask w4jnl/tap/doma
+            out=$(spctl --assess -vv /Applications/doma.app 2>&1) || true
+            echo "$out"
+            grep -q "source=Notarized Developer ID" <<<"$out"
+          else
+            echo "macOS $(sw_vers -productVersion): doma for Mac needs 26, so no install here"
+          fi
   install:
     name: install (${{ matrix.os }})
     strategy:
