@@ -13,9 +13,7 @@ cask "doma" do
 
   app "doma.app"
 
-  zap trash: [
-    "~/Library/Containers/nl.w4j.doma.mac",
-  ]
+  zap trash: "~/Library/Containers/nl.w4j.doma.mac"
 
   caveats <<~EOS
     doma for Mac joins your household with an invite from a phone that is already in it:
