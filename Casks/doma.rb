@@ -1,8 +1,8 @@
 # doma for Mac: the family's lists in a window. Signed with a Developer ID and notarized;
 # scripts/release.sh in w4jnl/doma writes this file at every tag.
 cask "doma" do
-  version "0.2.0"
-  sha256 "10ded79346580db4fa82c664ac55ef19cfffc290723fac7b4bcf1c5dbf7dfda4"
+  version "0.2.1"
+  sha256 "d6dd72a53183092e2c167f2aca5a47c7120f7488a3421ccd5bb003f2e5e61e65"
 
   url "https://github.com/w4jnl/doma/releases/download/v#{version}/doma-#{version}.dmg"
   name "doma"
