@@ -1,8 +1,8 @@
 # nt for Mac: the notes repository in a window, nt's mark in the menu bar. Signed with a Developer
 # ID and notarized; scripts/release.sh in w4jnl/nt writes this file at every tag.
 cask "nt-app" do
-  version "0.9.5"
-  sha256 "83b9f8a0c6d554f1c1a46886a8328bf0393d4f22b5dbb0556d0246e249cc2e9a"
+  version "0.9.6"
+  sha256 "f65dbe2a23669dd474b58e99519aa66cb37686bf9c824563c71d9d4ad2796a7d"
 
   url "https://github.com/w4jnl/nt/releases/download/v#{version}/nt-#{version}.dmg"
   name "nt"
