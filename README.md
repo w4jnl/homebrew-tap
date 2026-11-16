@@ -9,7 +9,6 @@ brew install nt          # plain markdown notes, synced by git — https://githu
 brew install mwrelay     # SMTP relay for MotiveWave fills — private repo: needs an SSH key with access
 brew install vink        # self-hosted heartbeat and uptime monitor — https://github.com/w4jnl/vink
 brew install --cask nt-app   # nt for Mac, notarized; macOS 26 or later — https://github.com/w4jnl/nt
-brew install --cask doma     # doma for Mac, the family's lists, notarized; macOS 26 or later — https://github.com/w4jnl/doma
 ```
 
 Formulae and the casks are bumped by `scripts/release.sh` in each project's repository.
